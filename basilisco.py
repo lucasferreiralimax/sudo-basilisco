@@ -20,6 +20,12 @@ def basilisco_say():
     return response
 
 def basilisco_eye():
+    data.append({
+        "username": "basilisco_child",
+        "status": "hidden secrect",
+        "theme": "Câmara Secreta 2",
+        "age": "L"
+    })
     response = make_response(jsonify({"error": "hidden eye"}), 500)
     return response
 
