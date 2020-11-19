@@ -15,6 +15,17 @@ data = [
     }
 ]
 
+themes = [
+    {
+        "name": "Câmara Secreta",
+        "level": 1,
+    }б
+    {
+        "name": "World",
+        "level": 2,
+    }
+]
+
 def basilisco_say():
     response = make_response(jsonify(data), 201)
     return response
@@ -39,3 +50,8 @@ def basilisco_api():
         return basilisco_eye()
     else:
         return basilisco_say()
+
+@app.route("/temas", methods=['GET'])
+def basilisco_themes():
+    response = make_response(jsonify(themes), 201)
+    return response
