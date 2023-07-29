@@ -48,8 +48,8 @@ def basilisco_home():
 def basilisco_api():    
     if request.method == 'POST':
         return basilisco_eye()
-    else:
-        return basilisco_say()
+    
+    return basilisco_say()
 
 @app.route("/temas", methods=['GET'])
 def basilisco_themes():
